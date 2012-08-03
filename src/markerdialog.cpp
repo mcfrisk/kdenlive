@@ -69,6 +69,7 @@ MarkerDialog::MarkerDialog(DocClipBase *clip, CommentedTime t, Timecode tc, cons
         case SLIDESHOW:
         case PLAYLIST:
             connect(this, SIGNAL(updateThumb()), m_previewTimer, SLOT(start()));
+            break;
         case IMAGE:
         case TEXT:
             p = QPixmap::fromImage(KThumb::getFrame(m_producer, m_in->getValue(), swidth, width, 100));
